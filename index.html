@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;"/>
+
+    <title>Dome of Visions</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        // Redirect console.log to Evothings Workbench.
+        if (window.hyper && window.hyper.log) {
+            console.log = hyper.log
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div id="header">
+
+    <div id="Title">
+        <h1>Dome of Visions</h1>
+    </div>
+
+</div>
+
+<div id="content">
+
+    <div id="Map">
+        <canvas id="MapCanvas">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+
+    <div id="InfoBox">
+    </div>
+
+    <div id="GraphBox">
+        <input id="closeGraph" type="image" src="close.png">
+        <h1 id="graphTitle">Graph</h1>
+        <div id="GraphDiv">
+            <canvas id="GraphCanvas" width="500px" height="300px">
+            </canvas>
+        </div>
+    </div>
+
+</div>
+
+<div id="footer">
+
+    <div id="Instructions">
+        <p>Click on a sensor to get data</p>
+        <p>Click on data to show a graph of the last 24 hours<br />Graphs work best in landscape view</p>
+        <p>Fetching data may take some time, be patient</p>
+    </div>
+
+</div>
+
+<script src="cordova.js"></script>
+<script src="libs/jquery/jquery.js"></script>
+<script src="libs/hammerjs/hammer.min.js"></script>
+<script src="libs/evothings/evothings.js"></script>
+<script src="libs/Chart.js-master/Chart.js"></script>
+<script src="libs/spin/spin.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
